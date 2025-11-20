@@ -86,7 +86,8 @@ input[type="text"], textarea {
       display: inline-block;
       margin: 20px auto;
       border: 2px solid #00ffea;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(228, 224, 224, 0.6);
+      margin-left: 150px;
 }
 
 .word {

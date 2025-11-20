@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Community Reporting Issue System</title>
+      <link rel="icon" type="image/png" href="/images/food aid.png">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="./css/index.css">
+      <link rel="stylesheet" href="/css/statistics.css">
+      <link rel="stylesheet" href="/map.html">
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body id="body">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+      <div class="container">
+      <a class="navbar-brand" href="https://github.com/adolphenayituriki" target="_blank"><img src="/images/food aid.png" alt="" style="width: 40px;"> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--This is the div of navigations-->
+      <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="#">Report an issue</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="#">View issue</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="#contactForm">Contact</a>
+            </li>
+            <li class="nav-item">
+                  <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="signinDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Signin <i class="fa-solid fa-circle-user"></i>
+                        </a>
+                  <ul class="dropdown-menu" aria-labelledby="signinDropdown">
+                        <li><a class="dropdown-item" href="#">Citizen</a></li>
+                        <li><a class="dropdown-item" href="#">Leader</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                  </li>
+            </li>
+            </ul>
+      </div>
+      </div>
+      </nav>
+<!-- Header with image or logo about food aid trandparency -->
+      <header class="container d-flex flex-column flex-md-row align-items-center justify-content-between my-4 gap-3">
+      </header>
+      <main class="container">
+      <div class="sign">
+            <span class="word glow">Welcome to the Community Reporting Issue System</span>
+      </div>
+
+      <div id="chatToggle">
+            <i class="fa-solid fa-comments"></i>
+      </div>
+
+      <!-- Chatboard Panel -->
+      <div id="chatBoard">
+            <div class="chat-header">
+                  <h5>Live Chat</h5>
+                  <span id="closeChat">&times;</span>
+            </div>
+            <div class="chat-body">
+                  <p><b>Support:</b> Hello! How can we help you today?</p>
+            </div>
+            <div class="chat-footer">
+                  <input type="text" id="chatInput" placeholder="Type your message...">
+                  <button id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+      </div>
+
+      <section id="page2">
+            <h1 class="heading1">COMMISSUE SYSTEM</h1>
+            <div class="image-section">
+                  <div class="image-box" onclick="">
+                        <img src="/images/kigali.jpg" alt="Digital Tracking Solution" class="img-fluid">
+                        <p>Enjoy Community Reporting Issue System</p>
+                        <button class="btn btn-primary" onclick="">Learn More</button>
+                  </div>
+                  <div class="image-box" onclick>
+                        <img src="/images/future goal.jpg" alt="Digital Tracking Solution" class="img-fluid">
+                        <p>Future Goal, is to Digitalize </p>
+                        <button class="btn btn-success" onclick="">Learn More</button>
+                  </div>
+                  <div class="image-box">
+                        <img src="/images/kinyinya.jpg" alt="Digital Tracking Solution" class="img-fluid">
+                        <p>how it is important</p>
+                        <button class="btn btn-primary">Learn More</button>
+                  </div>
+            </div>
+            <h1>Enjoy Community Reporting Issue System</h1>
+            <h2>Rate Our Service</h2>
+            <div class="stars">
+                  <span class="star" data-value="1" id="star1">&#9733;</span>
+                  <span class="star" data-value="2" id="star2">&#9733;</span>
+                  <span class="star" data-value="3"  id="star3">&#9733;</span>
+                  <span class="star" data-value="4" id="star4">&#9733;</span>
+                  <span class="star" data-value="5" id="star5">&#9733;</span>
+            </div>
+            <p id="ratingValue" style="color: #098393;">Your rating: 0</p>
+      </section>
+
+      <div class="container" id="container" class="hero-banner text-center text-white d-flex align-items-center" style="background: url('/images/supporting\ output.png') center/cover no-repeat;">
+            <h1 class="display-4 fw-bold animate__animated animate__fadeInDown" style="color: rgb(228, 154, 15);">Rwanda with clear easy reporting issue to get quick help</h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp" style="color: rgb(10, 157, 190);">Ensuring fairness and accountability for community issues</p>
+            <a href="#" class="btn btn-m-5 btn-lg btn-warning shadow animate__animated animate__fadeInUp" >Whay this neccessary?</a>
+      </div>
+</section>
+      <div class="container">
+            <div class="row g-3">
+                  <div class="col-md-3">
+                        <div class="stat-box">
+                              <h5><i class="fas fa-truck" style="color: #dd2476;"></i> People Reached the System</h5>
+                              <h3 id="mealsCount">50,000</h3>
+                        </div>
+                  </div>
+                  <div class="col-md-3">
+                        <div class="stat-box">
+                              <h5>Issue Reported</h5>
+                              <h3 id="peopleCount">15,000</h3>
+                        </div>
+                  </div>
+                  <div class="col-md-3">
+                        <div class="stat-box">
+                              <h5>People Helped</h5>
+                              <h3 id="districtCount">30</h3>
+                        </div>
+                  </div>
+                  <div class="col-md-3">
+                        <div class="stat-box">
+                              <h5>Transparency Score</h5>
+                              <h3 id="scoreCount">95%</h3>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <section class="py-5">
+            <div class="container text-center">
+                  <h2 class="mb-4">Some Feed back from the Peoples</h2>
+                  <div class="row">
+                        <div class="col-md-4">
+                              <img src="images/adolphe.jpg" class="rounded-circle mb-3" width="100" height="100" alt="User 1">
+                              <blockquote>"Thanks to this platform, i reported issue for one day and i received feedback in one day!!"</blockquote>
+                              <p style="color: #0077b5;">Adolphe Nayituriki, Burera</p>
+                        </div>
+                        <div class="col-md-4">
+                              <img src="images/felicite.png" class="rounded-circle mb-3" width="100" height="100" alt="User 2">
+                              <blockquote>"I can now report issue and get feedback in real time."</blockquote>
+                              <p style="color: #0077b5;">Kantengwa Jeannette, NYAMAGABE</p>
+                        </div>
+                        <div class="col-md-4">
+                              <img src="/images/foreigners.png" class="rounded-circle mb-3" width="100" height="100" alt="User 3">
+                              <blockquote>"This system builds trust between communities and leaders becouse of the secured way to report issue"</blockquote>
+                              <p style="color: #0077b5;"">Foreign Visitors , Canada</p>
+                        </div>
+                  </div>
+            </div>
+      </section>
+      <section class="py-5 bg-light">
+            <div class="container text-center">
+            <h2 class="mb-4">How This Syestem It Works !</h2>
+            <div class="row">
+                  <div class="col-md-3">
+                        <i class="fas fa-exclamation-triangle fa-3x mb-3 text-danger"></i>
+                        <h5>Report Issues</h5>
+                  </div>
+                  <div class="col-md-3">
+                        <i class="fas fa-check-circle fa-3x mb-3 text-success"></i>
+                        <h5>View Issue Handling Progress</h5>
+                  </div>
+            
+                  <div class="col-md-3">
+                        <i class="fas fa-handshake fa-3x mb-3 text-primary"></i>
+                        <h5>Build Trust</h5>
+                  </div>
+                  <div class="col-md-3">
+                        <i class="fa-solid fa-phone fa-3x mb-3 text-success"></i>
+                        <h5>Quick Contact</h5>
+                  </div>
+            </div>
+      </div>
+      </section>
+      <section class="py-5 bg-light">
+            <div class="container">
+                  <h2 class="text-center mb-4">Latest Updates News</h2>
+                  <div class="row">
+                        <div class="col-md-4">
+                              <div class="card shadow-sm">
+                                    <img src="images/health2.png" class="card-img-top" alt="News 1">
+                                    <div class="card-body">
+                                          <h5 class="card-title-primary">People from Kinyinya District Received the System to Support them to Get Quick Help</h5>
+                                          <p class="card-text">A new policy to improve online reporting systems was announced today...</p>
+                                          <a href="#" class="btn btn-sm btn-success">Open Full Post</a>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-md-4">
+                              <div class="card shadow-sm">
+                                    <img src="images/musanze.jpeg" class="card-img-top" alt="News 2">
+                                    <div class="card-body">
+                                          <h5 class="card-title-primary">District at the Top of Using this Syestem</h5>
+                                          <p class="card-text">Recognizing Mistricts that Present the Use of this System Management...</p>
+                                          <a href="#" class="btn btn-sm btn-success">Open Full Pos</a>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-md-4">
+                              <div class="card shadow-sm">
+                                    <img src="images/children3.jpg" class="card-img-top" alt="News 3">
+                                    <div class="card-body">
+                                          <h5 class="card-title-primary">Volunteer Impact on Training Citizens How to Use This System</h5>
+                                          <p class="card-text">Meet the volunteers making a difference on the ground...</p>
+                                          <a href="#" class="btn btn-sm btn-success">Open Full Pos</a>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </section>
+<!-- 7. FAQ -->
+      <section class="py-5">
+            <div class="container">
+                  <h2 class="text-center mb-4" style="color: #098393;">Today's Frequently Asked Questions</h2>
+                  <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                              <h2 class="accordion-header">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">How do I Report my Issue?</button>
+                              </h2>
+                              <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body" style="color: #0077b5;">Answe will be posted here!!!</div>
+                              </div>
+                        </div>
+                        <div class="accordion-item">
+                              <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">Who can report issues or any suggestion?</button>
+                              </h2>
+                              <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body" style="color: #098393;">Any registered user can submit his or her issue via the report form.</div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </section>
+<!-- 9. PARTNERS -->
+      <section class="py-5 bg-light text-center">
+            <div class="container">
+                  <h2 class="mb-4">Our Partners</h2>
+                  <div class="row">
+                        <div class="col-md-3"><a href="https://www.wfp.org/countries/rwanda"><img src="images/partner3.svg" class="img-fluid" alt="Partner 1" style="cursor: pointer;"></a></div>
+                        <div class="col-md-3"><img src="images/partner2.jpg" class="img-fluid" alt="Partner 2"></div>
+                        <div class="col-md-3"><img src="images/partners.png" class="img-fluid" alt="Partner 3"></div>
+                        <div class="col-md-3"><img src="images/supporting output.png" class="img-fluid" alt="Partner 4"></div>
+                  </div>
+            </div>
+      </section>
+
+      <div class="sign">
+            <span class="word glow" style="font-size: 21.6px;">Rwanda is now trying to optimize transpatency in reporting issue for community and quick respondence</span>
+      </div>
+
+      <footer>
+
+      <form action="https://formsubmit.co/www.nayituriki.com@gmail.com" id="contactForm">
+            <h1>Contact Us?</h1>
+            <label for="username" id="fullName">Full Names:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your names" />
+            <label for="username">District</label>
+            <input type="text" id="sistrict" name="username" placeholder="District name" />
+            <label for="username">Sector</label>
+            <input type="text" id="sector" name="username" placeholder="District name" />
+            <label for="username">Cell</label>
+            <input type="text" id="username" name="username" placeholder="District name" />
+            <label for="username">Village</label>
+            <input type="text" id="username" name="username" placeholder="District name" />
+            <label for="email">Email or Phone number</label>
+            <input type="text" id="email" name="email" placeholder="Your email or phone number" required />
+            <label for="message">Message</label>
+            <textarea name="message" id=""></textarea>
+            <input type="submit" value="Submit" />
+      </form>
+      <section class="lastContent text-center mt-5" id="scloll">
+            <p>Vosit the platforms, on below platforms to see further information about what and how it does</p>
+            <div class="footerContacts d-flex justify-content-center mb-3">
+                  <a href="#" target="_blank" title="LinkedIn" style="color:#0077b5;"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="#" target="_blank" title="Instagram" style="color:#dd2476;"><i class="fa-brands fa-square-instagram"></i></a>
+                  <a href="http://www.youtube.com/@Relax-words03" target="_blank" title="YouTube" style="color:#ff0000;" onclick="link()"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div id="contentBox" style="font-size: 20px;"><p style="color: #0077b5;"> © 2025 Community Issue Reporting System</p></div>
+      </section>
+      </footer>
+      </main>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="/js/index.js"></script>
+      <script src="/js/statistics.js"></script>
+</body>
+</html>

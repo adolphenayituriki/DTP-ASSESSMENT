@@ -271,3 +271,15 @@ section#page2 {
       color: white;
       border-radius: 10px;
 }
+
+.container_reaction{
+      border: 2px solid;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 15px;
+}
+.container_update{
+      border: 5px solid rgb(205, 238, 248) ;
+      padding: 5px;
+      border-radius: 5px;
+}

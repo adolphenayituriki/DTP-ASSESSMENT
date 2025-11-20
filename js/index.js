@@ -45,4 +45,31 @@ function updateDateTime(){
 setInterval(updateDateTime, 1000);
 updateDateTime();
 
+document.getElementById('issueForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent page reload
+
+    let formData = new FormData(this);
+
+    fetch('submit_issue.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert(data.message);
+        if (data.status === 'success') {
+            this.reset(); // clear the form
+            const modal = bootstrap.Modal.getInstance(document.getElementById('reportModal'));
+            modal.hide(); // hide modal
+        }
+    })
+    .catch(err => console.error(err));
+});
+
+
+
+
+
+
+
 

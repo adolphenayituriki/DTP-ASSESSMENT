@@ -84,42 +84,39 @@
                   <button id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
       </div>
-
       <!-- REPORT ISSUE MODAL -->
       <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
-
-                  <div class="modal-header">
+                        <div class="modal-header">
                         <h5 class="modal-title" id="reportModalLabel">Report an Issue</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-
-                  <div class="modal-body">
+                        </div>
+                        <div class="modal-body">
                         <form id="issueForm">
 
-                              <div class="mb-3">
-                              <label class="form-label">Issue Title</label>
-                              <input type="text" class="form-control" name="title" required>
-                              </div>
+                        <div class="mb-3">
+                              <label for="issueTitle" class="form-label">Issue Title</label>
+                              <input type="text" class="form-control" id="issueTitle" name="title" required>
+                        </div>
 
-                              <div class="mb-3">
-                              <label class="form-label">Description</label>
-                              <textarea class="form-control" name="description" rows="3" required></textarea>
-                              </div>
-
-                              <div class="mb-3">
-                              <label class="form-label">Your Names</label>
-                              <input type="text" class="form-control" name="reporter">
-                              </div>
-
-                              <button type="submit" class="btn btn-primary w-100">Submit Issue</button>
+                        <div class="mb-3">
+                              <label for="issueDescription" class="form-label">Description</label>
+                              <textarea class="form-control" id="issueDescription" name="description" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                              <label for="reporterName" class="form-label">Your Name</label>
+                              <input type="text" class="form-control" id="reporterName" name="reporter" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit Issue</button>
                         </form>
-                  </div>
+                        </div>
 
                   </div>
             </div>
       </div>
+
 
       <!-- VIEW ISSUE MODAL -->
       <div class="modal fade" id="viewIssueModal" tabindex="-1" aria-labelledby="viewIssueModalLabel" aria-hidden="true">
@@ -188,7 +185,7 @@
             <a href="#" class="btn btn-m-5 btn-lg btn-warning shadow animate__animated animate__fadeInUp" >Whay this neccessary?</a>
       </div>
 </section>
-      <div class="container">
+      <div class="container_reaction">
             <div class="row g-3">
                   <div class="col-md-3">
                         <div class="stat-box">
@@ -264,12 +261,12 @@
       </div>
       </section>
       <section class="py-5 bg-light">
-            <div class="container">
+            <div class="container_update">
                   <h2 class="text-center mb-4">Latest Updates News</h2>
                   <div class="row">
                         <div class="col-md-4">
                               <div class="card shadow-sm">
-                                    <img src="images/health2.png" class="card-img-top" alt="News 1">
+                                    <img src="images/kinyinya.jpg" class="card-img-top" alt="News 1">
                                     <div class="card-body">
                                           <h5 class="card-title-primary">People from Kinyinya District Received the System to Support them to Get Quick Help</h5>
                                           <p class="card-text">A new policy to improve online reporting systems was announced today...</p>
@@ -279,9 +276,9 @@
                         </div>
                         <div class="col-md-4">
                               <div class="card shadow-sm">
-                                    <img src="images/musanze.jpeg" class="card-img-top" alt="News 2">
+                                    <img src="images/muhanga.jpg" class="card-img-top" alt="News 2">
                                     <div class="card-body">
-                                          <h5 class="card-title-primary">District at the Top of Using this Syestem</h5>
+                                          <h5 class="card-title-primary">District at the Top of Using this System</h5>
                                           <p class="card-text">Recognizing Mistricts that Present the Use of this System Management...</p>
                                           <a href="#" class="btn btn-sm btn-success">Open Full Pos</a>
                                     </div>
@@ -289,7 +286,7 @@
                         </div>
                         <div class="col-md-4">
                               <div class="card shadow-sm">
-                                    <img src="images/children3.jpg" class="card-img-top" alt="News 3">
+                                    <img src="images/trainging.webp" class="card-img-top" alt="News 3">
                                     <div class="card-body">
                                           <h5 class="card-title-primary">Volunteer Impact on Training Citizens How to Use This System</h5>
                                           <p class="card-text">Meet the volunteers making a difference on the ground...</p>
@@ -337,7 +334,7 @@
             </div>
       </section>
 
-      <div class="sign">
+      <div class="sign2">
             <span class="word glow" style="font-size: 21.6px;">Rwanda is now trying to optimize transpatency in reporting issue for community and quick respondence</span>
       </div>
 
@@ -374,6 +371,5 @@
       </main>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
       <script src="/js/index.js"></script>
-      <script src="/js/statistics.js"></script>
 </body>
 </html>
